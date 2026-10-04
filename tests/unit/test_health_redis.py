@@ -9,6 +9,8 @@ from api.routes.health import router
 from core.config import settings
 from core.database import get_db
 
+pytestmark = pytest.mark.unit
+
 
 class FailingDB:
     async def execute(self, query):
